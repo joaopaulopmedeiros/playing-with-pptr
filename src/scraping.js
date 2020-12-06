@@ -15,7 +15,7 @@ const attack = (url) => {
   bot.setUrl(url);
 };
 
-const click = async (node, totalIterations) => {
+const click = async (node, totalIterations = 1) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setViewport({
